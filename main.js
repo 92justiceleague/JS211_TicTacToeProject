@@ -69,12 +69,33 @@ const diagonalWin = () => {
   }
 }
 
+//Thank heavens for youtube
+
 const checkForWin = () => {
-  // Your code here call each of the check for types of wins
+  console.log("Ticcer Taccer Toesies")
+  if(horizontalWin() == true)
+  {
+    return true
+  }
+
+  if(verticalWin() == true)
+  {
+    return true
+  }
+
+  if (diagonalWin() == true)
+  {
+    return true
+  }
+
+  return false
 }
 
 const ticTacToe = (row, column) => {
-if(playerTurn == 'x')
+console.log("Ticcer Taccer Toesies")
+checkForWin()
+
+  if(playerTurn == 'x')
 { 
 board[row][column] = 'X'
 playerTurn = 'O'
@@ -95,9 +116,9 @@ const getPrompt = () => {
   });
 }
 
-// Unit Tests
-// You use them run the command: npm test main.js
-// to close them ctrl + C
+
+
+
 if (typeof describe === 'function') {
 
   describe('#ticTacToe()', () => {
